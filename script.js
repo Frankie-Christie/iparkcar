@@ -1,4 +1,4 @@
-let map = document.getElementById("map");
+let map = L.map("map").setView([0, 0], 1);
 
 L.tileLayer("https://api.maptiler.com/maps/hybrid-v4/{z}/{x}/{y}.jpg?key=fY9qbKMhlDxa9FUU85k9",
 {
