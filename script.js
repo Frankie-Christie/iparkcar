@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }).addTo(map);
 
       //build mobility parking icons
-    L.geoJSON(mobility_parking.features, {
+    L.geoJSON(mobility_parking, {
         onEachFeature: (feature, layer) => {
             const p = feature.properties;
             const globalID = p.GlobalID;            //might be helpful for removing duplicates
