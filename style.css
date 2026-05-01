@@ -1,7 +1,32 @@
-#map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+* {
+    box-sizing: border-box;
 }
+
+.icon {
+    height: 2em;
+}
+
+.topnav {
+    background-color: blue;
+    font-size: 2em;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 1em;
+    text-decoration: none;
+  }
+
+  .topnav a:hover {
+    background-color: darkblue;
+  }
+
+  .topnav input[type=text] {
+    float: left;
+    padding: .3em;
+    margin-top: .35em;
+    border: none;
+  }
