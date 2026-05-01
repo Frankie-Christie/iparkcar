@@ -7,19 +7,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     //fetch layers from geojson i cached from gis.tauranga.govt.nz' api: car parks, parking buildings, off street parking (waikato uni), mobility parking
     //can also get bus stops, public toilets, bins, etc later if i want
-    const [mobility_parking, car_parks, off_street_parking, parking_buildings] = await Promise.all([
+    const [mobility_parking, car_parks] = await Promise.all([
         fetch('./geojson/mobility.json').then(r => r.json()),
-        fetch('./geojson/carparks.json').then(r => r.json()),
-        fetch('./geojson/offstreet.json').then(r => r.json()),
-        fetch('./geojson/parkingbuildings.json').then(r => r.json())
+        fetch('./geojson/carparks.json').then(r => r.json())
     ]);
-    
-    const combined = {
-        features: [...car_parks.features, ...parking_buildings.features, ...off_street_parking.features]   
-    };
 
     //build parking builing/lot polygons
-    L.geoJSON(combined, {
+    L.geoJSON(car_parks, {
         style: { color: 'green', fillOpacity: 0.4 },
         onEachFeature: (feature, layer) => {
             const p = feature.properties;
