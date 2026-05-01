@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     { maxZoom: 22, attribution: '© LINZ' }
     ).addTo(map);
 
-    //fetch layers from gis.tauranga.govt.nz: car parks, parking buildings, off street parking (waikato uni), mobility parking
+    //fetch layers from geojson i cached from gis.tauranga.govt.nz' api: car parks, parking buildings, off street parking (waikato uni), mobility parking
     //can also get bus stops, public toilets, bins, etc later if i want
     const [car_parks, parking_buildings, off_street_parking, mobility_parking] = await Promise.all([
-        fetch('https://gis.tauranga.govt.nz/server/rest/services/Points_of_Interest_multiple/MapServer/4/query?where=1%3D1&outFields=*&f=geojson').then(r => r.json()),
-        fetch('https://gis.tauranga.govt.nz/server/rest/services/Mapi_Transportation/MapServer/8/query?where=1%3D1&outFields=*&f=geojson').then(r => r.json()),
-        fetch('https://gis.tauranga.govt.nz/server/rest/services/Mapi_Transportation/MapServer/9/query?where=1%3D1&outFields=*&f=geojson').then(r => r.json()),
-        fetch('https://gis.tauranga.govt.nz/server/rest/services/Mapi_Transportation/MapServer/10/query?where=1%3D1&outFields=*&f=geojson').then(r => r.json())
+        fetch('./mobility.json').then(r => r.json()),
+        fetch('./carparks.json').then(r => r.json()),
+        fetch('./offstreet.json').then(r => r.json()),
+        fetch('./parkingbuildings.json').then(r => r.json())
     ]);
     
     const combined = {

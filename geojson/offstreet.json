@@ -1,0 +1,118 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": 4,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [176.167129387663, -37.6829458329258],
+              [176.166744232012, -37.6829645022781],
+              [176.166703618439, -37.6834324499071],
+              [176.167172463127, -37.6834118642476],
+              [176.167129387663, -37.6829458329258]
+            ]
+          ]
+        },
+        "properties": {
+          "OBJECTID": 4,
+          "ParkID": 9,
+          "OpenHours": "9am-5pm",
+          "AvailParks": 45,
+          "Status": "Current",
+          "CostHr": 1,
+          "TimeRestriction": null,
+          "GlobalID": "{E8B6CAE3-E43D-4763-997A-F37D501A3478}",
+          "SHAPE.STArea()": 1954.668828,
+          "SHAPE.STLength()": 179.482822114545
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 6,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [176.135497220845, -37.7266966208022],
+              [176.135314978465, -37.7269673710794],
+              [176.135731585097, -37.727136473784],
+              [176.13590829916, -37.7268658718915],
+              [176.135888584471, -37.7268576058764],
+              [176.135497220845, -37.7266966208022]
+            ]
+          ]
+        },
+        "properties": {
+          "OBJECTID": 6,
+          "ParkID": 16,
+          "OpenHours": "P180",
+          "AvailParks": 55,
+          "Status": "Current",
+          "CostHr": 0,
+          "TimeRestriction": null,
+          "GlobalID": "{9EF1F3B1-F985-40E2-A3EE-4F7E2B5E85BB}",
+          "SHAPE.STArea()": 1394.958001555,
+          "SHAPE.STLength()": 150.055327118473
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 7,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [176.183439557188, -37.6367960954717],
+              [176.183558346252, -37.6370650055241],
+              [176.183944592181, -37.6369521719493],
+              [176.183827276793, -37.6366898600852],
+              [176.183439557188, -37.6367960954717]
+            ]
+          ]
+        },
+        "properties": {
+          "OBJECTID": 7,
+          "ParkID": 14,
+          "OpenHours": null,
+          "AvailParks": 40,
+          "Status": "Current",
+          "CostHr": 0,
+          "TimeRestriction": null,
+          "GlobalID": "{AFD5094A-4E80-446F-A68F-3250F7BE9EB4}",
+          "SHAPE.STArea()": 1134.90992653,
+          "SHAPE.STLength()": 135.12691660213
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 13,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [176.167084114609, -37.6853505522974],
+              [176.166624824064, -37.6852899957364],
+              [176.16651188856, -37.6856247245082],
+              [176.167010862748, -37.6857001225456],
+              [176.167084114609, -37.6853505522974]
+            ]
+          ]
+        },
+        "properties": {
+          "OBJECTID": 13,
+          "ParkID": 4,
+          "OpenHours": "7am-5pm",
+          "AvailParks": 66,
+          "Status": "Current",
+          "CostHr": 1,
+          "TimeRestriction": null,
+          "GlobalID": "{ECC1E779-BF2D-488C-BDF3-13B5E3347CA3}",
+          "SHAPE.STArea()": 1668.75594932,
+          "SHAPE.STLength()": 163.756341957094
+        }
+      }
+    ]
+  }
