@@ -10,35 +10,23 @@
 
 .map-overlay {
     position: absolute;
-    top: 1em;
-    right: 1em;
     z-index: 1000; /* above the map tiles */
 }
 
 .topnav {
     background-color: #264f93;
     align-content: center;
+    width: 100%;
 }
 
-.topnav img {
-    float: left;
+.topnap img, .topnav input {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 1em 1em;
-    text-decoration: none;
-    background-color: #264f93;
-    font-size: large;
-    height: 2rem;
-  }
+}
 
-  .topnav img:hover {
+.topnav img:hover {
     background-color: #1a4481;
-  }
+}
 
-  .topnav input[type=text] {
-    float: left;
-    padding: .3em;
-    margin-top: .35em;
+.topnav input[type=text] {
     border: none;
-  }
+}
