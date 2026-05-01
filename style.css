@@ -20,19 +20,31 @@ body {
 .topnav {
     background-color: #264f93;
     align-content: center;
+    justify-content: center;
     width: 100%;
 }
 
-.topnap img, .topnav input {
+h1 {
+    width: 100%;
+    margin: none;
+    padding: 2em;
+    background-color: #264f93;
+}
+
+.header-icon {
+    height: auto;
+}
+
+.nav-icon, .topnav input {
     display: block;
     float: left;
 }
 
-.topnav img {
-    height: 2em;
+.nav-icon {
+    height: 4em;
 }
 
-.topnav img:hover {
+.nav-icon:hover {
     background-color: #1a4481;
 }
 
