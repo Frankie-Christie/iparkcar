@@ -15,23 +15,24 @@
     z-index: 1000; /* above the map tiles */
 }
 
-.icon {
-    height: 1em;
+.topnav {
+    background-color: #264f93;
+    align-content: center;
 }
 
-.topnav a {
+.topnav img {
     float: left;
     display: block;
     color: white;
     text-align: center;
     padding: 1em 1em;
     text-decoration: none;
-    background-color: blue;
+    background-color: #264f93;
     font-size: large;
   }
 
-  .topnav a:hover {
-    background-color: darkblue;
+  .topnav img:hover {
+    background-color: #1a4481;
   }
 
   .topnav input[type=text] {
