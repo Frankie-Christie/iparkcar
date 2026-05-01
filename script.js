@@ -38,9 +38,19 @@ document.addEventListener('DOMContentLoaded', async function() {
                     Paid: ${paid ?? 'Unknown'}
                 `
             );
-          layer.on('click', () => {
-            alert("you clicked me!");
-          });
         }
-      }).addTo(map);
+    }).addTo(map);
+
+      //build mobility parking icons
+    L.geoJSON(mobility_parking.features, {
+        onEachFeature: (feature, layer) => {
+            const p = feature.properties;
+            const globalID = p.GlobalID;            //might be helpful for removing duplicates
+
+            //popup customisation
+            layer.bindPopup(
+                p.SiteDescription
+            );
+        }
+    }).addTo(map);
 });
