@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             //popup customisation
             layer.bindPopup(
                 `
-                    <b>${p.globalID ?? 'Unknown'}</b>
+                    <b>${globalID ?? 'Unknown'}</b>
                     <br>
                     Spaces: ${p.AvailParks ?? 'Unknown'}
                     <br>
