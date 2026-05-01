@@ -3,12 +3,7 @@
 }
 
 .icon {
-    height: 2em;
-}
-
-.topnav {
-    background-color: blue;
-    font-size: 2em;
+    height: 1em;
 }
 
 .topnav a {
@@ -18,6 +13,8 @@
     text-align: center;
     padding: 1em 1em;
     text-decoration: none;
+    background-color: blue;
+    font-size: large;
   }
 
   .topnav a:hover {
