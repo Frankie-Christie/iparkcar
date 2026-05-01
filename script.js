@@ -1,50 +1,27 @@
 document.addEventListener('DOMContentLoaded', async function() {
   
+    const style = await fetch('https://basemaps.linz.govt.nz/v1/tiles/topographic/3857/style/topographic.json?api=REMOVED').then(r => r.json());
+
+    // keep only symbol layers (text labels)
+    style.layers = style.layers.filter(l => l.type === 'symbol');
+
+    // add aerial as first source
+    style.sources.aerial = {
+        type: 'raster',
+        tiles: ['https://basemaps.linz.govt.nz/v1/tiles/aerial/3857/{z}/{x}/{y}.webp?api=REMOVED'],
+        tileSize: 256,
+        maxzoom: 22
+    };
+
+    // add aerial as first layer
+    style.layers.unshift({ id: 'aerial', type: 'raster', source: 'aerial' });
+
     const map = new maplibregl.Map({
         container: 'map',
-        style: {
-          version: 8,
-          glyphs: 'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',
-          sources: {
-            aerial: {
-              type: 'raster',
-              tiles: ['https://basemaps.linz.govt.nz/v1/tiles/aerial/WebMercatorQuad/{z}/{x}/{y}.webp?api=REMOVED'],
-              tileSize: 256,
-              maxzoom: 22
-            },
-            labels: {
-              type: 'vector',
-              tiles: ['https://basemaps.linz.govt.nz/v1/tiles/topographic/WebMercatorQuad/{z}/{x}/{y}.pbf?api=REMOVED'],
-              maxzoom: 14
-            }
-          },
-          layers: [
-            {
-              id: 'aerial',
-              type: 'raster',
-              source: 'aerial'
-            },
-            {
-              id: 'street-names',
-              type: 'symbol',
-              source: 'labels',
-              'source-layer': 'street_labels',
-              layout: {
-                'text-field': ['get', 'name'],
-                'text-size': 12,
-                'text-font': ['Open Sans Regular']
-              },
-              paint: {
-                'text-color': '#ffffff',
-                'text-halo-color': '#000000',
-                'text-halo-width': 1.5
-              }
-            }
-          ]
-        },
+        style: style,
         center: [176.166, -37.686],
         zoom: 15
-      });
+    });
 
     //fetch layers from geojson i cached from gis.tauranga.govt.nz' api: car parks, parking buildings, off street parking (waikato uni), mobility parking
     //can also get bus stops, public toilets, bins, etc later if i want
