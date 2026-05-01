@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     //fetch layers from geojson i cached from gis.tauranga.govt.nz' api: car parks, parking buildings, off street parking (waikato uni), mobility parking
     //can also get bus stops, public toilets, bins, etc later if i want
     const [car_parks, parking_buildings, off_street_parking, mobility_parking] = await Promise.all([
-        fetch('./mobility.json').then(r => r.json()),
-        fetch('./carparks.json').then(r => r.json()),
-        fetch('./offstreet.json').then(r => r.json()),
-        fetch('./parkingbuildings.json').then(r => r.json())
+        fetch('./geojson/mobility.json').then(r => r.json()),
+        fetch('./geojson/carparks.json').then(r => r.json()),
+        fetch('./geojson/offstreet.json').then(r => r.json()),
+        fetch('./geojson/parkingbuildings.json').then(r => r.json())
     ]);
     
     const combined = {
