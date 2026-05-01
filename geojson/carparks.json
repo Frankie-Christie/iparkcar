@@ -328,7 +328,7 @@
         "properties": {
           "OBJECTID": 16,
           "ParkID": null,
-          "Name": null,
+          "Name": "45 Cliff Rd Parking",
           "Operator": null,
           "OpenHours": null,
           "AvailParks": null,
@@ -465,7 +465,7 @@
         "properties": {
           "OBJECTID": 17,
           "ParkID": null,
-          "Name": null,
+          "Name": "Dive Crescent Car Park",
           "Operator": null,
           "OpenHours": null,
           "AvailParks": null,
@@ -510,7 +510,7 @@
         "properties": {
           "OBJECTID": 18,
           "ParkID": null,
-          "Name": null,
+          "Name": "Devonport Road Car Park",
           "Operator": null,
           "OpenHours": null,
           "AvailParks": null,
