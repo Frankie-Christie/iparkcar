@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         container: 'map',
         style: {
           version: 8,
+          glyphs: 'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',
           sources: {
             aerial: {
               type: 'raster',
