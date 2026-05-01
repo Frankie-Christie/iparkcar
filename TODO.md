@@ -3,6 +3,7 @@
 - [ ] fix mobility data  
 - [ ] add mobility icons
 - [ ] correct missing data using google maps
+- [ ] add street and building labels
 - [ ] draw polygons for kerbside parking and privately owned - [ ] parking lots (scamalots)
 - [ ] configure clicking = occupied behaviour
 - [ ] set up some dummy data or try to get real parking meter data (99% likely no public access)
