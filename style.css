@@ -23,6 +23,10 @@
     display: block;
 }
 
+.topnav img {
+    height: 2em;
+}
+
 .topnav img:hover {
     background-color: #1a4481;
 }
