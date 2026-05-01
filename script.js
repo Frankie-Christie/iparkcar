@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
     const map = L.map('map').setView([-37.686, 176.166], 15);
   
-    await L.tileLayer('https://basemaps.linz.govt.nz/v1/tiles/aerial/WebMercatorQuad/{z}/{x}/{y}.webp?api=REMOVED',
+    L.tileLayer('https://basemaps.linz.govt.nz/v1/tiles/aerial/WebMercatorQuad/{z}/{x}/{y}.webp?api=REMOVED',
     { maxZoom: 22, attribution: '© LINZ' }
     ).addTo(map);
 
@@ -15,9 +15,32 @@ document.addEventListener('DOMContentLoaded', async function() {
     ]);
     
     const combined = {
-        type: "FeatureCollection",
         features: [...car_parks.features, ...parking_buildings.features, ...off_street_parking.features, ...mobility_parking.features]
     };
 
-    L.geoJSON(combined).addTo(map);
+    //build parking builing/lot polygons
+    L.geoJSON(combined, {
+        style: { color: 'green', fillOpacity: 0.4 },
+        onEachFeature: (feature, layer) => {
+            const p = feature.properties;
+            const globalID = p.GlobalID;            //might be helpful for removing duplicates
+            const paid = p?.CostHr > 0 ? "Yes" : "No";
+
+            //popup customisation
+            layer.bindPopup(
+                `
+                    <b>${p.Name ?? 'Unknown'}</b>
+                    <br>
+                    Spaces: ${p.AvailParks ?? 'Unknown'}
+                    <br>
+                    Open hours: ${p.OpenHours ?? 'Unknown'}
+                    <br>
+                    Paid: ${paid ?? 'Unknown'}
+                `
+            );
+          layer.on('click', () => {
+            alert("you clicked me!");
+          });
+        }
+      }).addTo(map);
 });
