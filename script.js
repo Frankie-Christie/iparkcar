@@ -41,8 +41,17 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }).addTo(map);
 
-      //build mobility parking icons
+    //set mobility park icon
+    const mobilityIcon = L.icon({
+        iconUrl: './icons/wheelchair.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      });
+
+      //build mobility parking markers
     L.geoJSON(mobility_parking, {
+        pointToLayer: (feature, latlng) => L.marker(latlng, { icon: mobilityIcon }),
         onEachFeature: (feature, layer) => {
             const p = feature.properties;
             const globalID = p.GlobalID;            //might be helpful for removing duplicates
