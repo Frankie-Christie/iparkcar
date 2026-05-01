@@ -29,10 +29,11 @@ h1 {
     margin: none;
     padding: 2em;
     background-color: #264f93;
+    color: white;
 }
 
 .header-icon {
-    height: 8em;
+    height: auto;
 }
 
 .nav-icon, .topnav input {
