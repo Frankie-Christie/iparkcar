@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     ]);
     
     const combined = {
-        features: [...car_parks.features, ...parking_buildings.features, ...off_street_parking.features, ...mobility_parking.features]
+        features: [...car_parks.features, ...parking_buildings.features, ...off_street_parking.features]   
     };
 
     //build parking builing/lot polygons
