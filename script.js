@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', async function() {
                 .setLngLat(e.lngLat)
                 .setHTML(`
                     <b>${p.Name ?? 'Unknown'}</b><br>
-                    <b>${p.GlobalID ?? 'Unknown'}</b><br>
                     Spaces: ${p.AvailParks ?? 'Unknown'}<br>
                     Open hours: ${p.OpenHours ?? 'Unknown'}<br>
                     Paid: ${paid}
