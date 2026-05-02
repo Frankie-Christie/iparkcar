@@ -36,6 +36,8 @@ h1 {
 
 header {
     width: 100vw;
+    padding-bottom: .5em;
+    background-color: white;
 }
 
 .nav-icon, .topnav input {

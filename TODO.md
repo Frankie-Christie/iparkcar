@@ -7,7 +7,7 @@
 - [ ] draw polygons for kerbside parking and privately owned - [ ] parking lots (scamalots)
 - [ ] configure clicking = occupied behaviour
 - [ ] set up some dummy data or try to get real parking meter data (99% likely no public access)
-- [ ] resize map and add header & navbar. hide header for mobile
+- [x] resize map and add header & navbar. hide header for mobile
 - [ ] add menu items
 - [ ] add filtering behaviour
 - [ ] add busy-metre
