@@ -8,7 +8,7 @@ body {
 }
 
 #map {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     position: relative;
 }
@@ -22,11 +22,11 @@ body {
     background-color: #264f93;
     align-content: center;
     justify-content: center;
-    width: 100vh;
+    width: 100vw;
 }
 
 h1 {
-    width: 100vh;
+    width: 100vw;
     margin: 0px;
     padding: .5em;
     background-color: #264f93;
@@ -34,7 +34,7 @@ h1 {
 }
 
 header {
-    width: 100vh;
+    width: 100vw;
 }
 
 .header-icon {
@@ -57,4 +57,11 @@ header {
     border: none;
     border-radius: .5em;
     margin: auto, 0px
+}
+
+/* mobile display adjustments */
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
 }
