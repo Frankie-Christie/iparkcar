@@ -135,7 +135,7 @@ window.addEventListener('resize', () => {
 });
 
 function setPanelPos() {
-    const navHeight = document.querySelector('.topnav').offsetHeight;
+    const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
     filterPanel.style.top = navHeight + 'px';
     menuPanel.style.top = navHeight + 'px';
 }

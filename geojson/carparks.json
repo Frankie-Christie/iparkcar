@@ -33,17 +33,12 @@
         },
         "properties": {
           "OBJECTID": 4,
-          "ParkID": 9,
           "Name": "Durham Street - TV3 Rooftop",
           "Operator": "TCC",
           "OpenHours": "9am-5pm",
-          "AvailParks": 45,
-          "Status": "Current",
+          "NumParks": 45,
           "CostHr": 1,
-          "TimeRestriction": null,
-          "GlobalID": "{E8B6CAE3-E43D-4763-997A-F37D501A3478}",
-          "SHAPE.STArea()": 1954.668828,
-          "SHAPE.STLength()": 179.4828221145449
+          "TimeRestriction": null
         }
       },
       {
@@ -94,17 +89,12 @@
         },
         "properties": {
           "OBJECTID": 5,
-          "ParkID": 5,
           "Name": "Spring Street Parking Buildings",
           "Operator": "Care Park New Zealand Ltd",
           "OpenHours": "7:00-18:30",
-          "AvailParks": 252,
-          "Status": "Current",
+          "NumParks": 252,
           "CostHr": 1,
-          "TimeRestriction": null,
-          "GlobalID": "{B7DF17D0-1541-4313-A26F-6D809BF7B1BB}",
-          "SHAPE.STArea()": 2730.0008116,
-          "SHAPE.STLength()": 226.2338371305691
+          "TimeRestriction": null
         }
       },
       {
@@ -139,17 +129,12 @@
         },
         "properties": {
           "OBJECTID": 13,
-          "ParkID": 4,
           "Name": "Durham Street - BOP Polytechnic Car Park",
           "Operator": "TCC",
           "OpenHours": "7am-5pm",
-          "AvailParks": 66,
-          "Status": "Current",
+          "NumParks": 66,
           "CostHr": 1,
-          "TimeRestriction": null,
-          "GlobalID": "{ECC1E779-BF2D-488C-BDF3-13B5E3347CA3}",
-          "SHAPE.STArea()": 1668.75594932,
-          "SHAPE.STLength()": 163.75634195709358
+          "TimeRestriction": null
         }
       },
       {
@@ -188,17 +173,12 @@
         },
         "properties": {
           "OBJECTID": 14,
-          "ParkID": 3,
           "Name": "67 First Ave Garage",
           "Operator": "TCC",
           "OpenHours": "7:00-18:30",
-          "AvailParks": 503,
-          "Status": "Current",
+          "NumParks": 503,
           "CostHr": 1,
-          "TimeRestriction": null,
-          "GlobalID": "{564F889D-77FA-47EF-8469-29826C5A00DD}",
-          "SHAPE.STArea()": 3212.54186803,
-          "SHAPE.STLength()": 246.21579268730338
+          "TimeRestriction": null
         }
       },
       {
@@ -233,17 +213,12 @@
         },
         "properties": {
           "OBJECTID": 16,
-          "ParkID": null,
           "Name": "45 Cliff Rd Parking",
           "Operator": null,
           "OpenHours": null,
-          "AvailParks": null,
-          "Status": null,
+          "NumParks": null,
           "CostHr": null,
-          "TimeRestriction": null,
-          "GlobalID": "{E13C158A-054F-4FA1-ABB3-EB5DB89FD205}",
-          "SHAPE.STArea()": 1981.645781435,
-          "SHAPE.STLength()": 179.88526250868486
+          "TimeRestriction": null
         }
       },
       {
@@ -370,17 +345,12 @@
         },
         "properties": {
           "OBJECTID": 17,
-          "ParkID": null,
           "Name": "Dive Crescent Car Park",
           "Operator": null,
           "OpenHours": null,
-          "AvailParks": null,
-          "Status": null,
+          "NumParks": null,
           "CostHr": null,
-          "TimeRestriction": null,
-          "GlobalID": "{A6C3269E-0CE6-4138-AA49-9534EE96B7CC}",
-          "SHAPE.STArea()": 4823.14768998,
-          "SHAPE.STLength()": 643.2457528386934
+          "TimeRestriction": null
         }
       },
       {
@@ -415,17 +385,12 @@
         },
         "properties": {
           "OBJECTID": 18,
-          "ParkID": null,
           "Name": "Devonport Road Car Park",
           "Operator": null,
           "OpenHours": null,
-          "AvailParks": null,
-          "Status": null,
+          "NumParks": null,
           "CostHr": null,
-          "TimeRestriction": null,
-          "GlobalID": "{F99B8710-17A0-42C2-8035-0D465923F8BB}",
-          "SHAPE.STArea()": 2712.570531315,
-          "SHAPE.STLength()": 214.21408270808524
+          "TimeRestriction": null
         }
       }
     ]

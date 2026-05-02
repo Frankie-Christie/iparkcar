@@ -10,8 +10,9 @@
     "features": [
         {
             "type": "Feature",
+            "id": 102,
             "properties": {
-                "id": 102,
+                "OBJECTID": 102,
                 "Name": "51 Cliff Rd Parking"
             },
             "geometry": {
@@ -58,8 +59,9 @@
         },
         {
             "type": "Feature",
+            "id": 103,
             "properties": {
-                "id": 103,
+                "OBJECTID": 103,
                 "Name": "Elizabeth Street Car Park"
             },
             "geometry": {
@@ -98,8 +100,9 @@
         },
         {
             "type": "Feature",
+            "id": 104,
             "properties": {
-                "id": 104,
+                "OBJECTID": 104,
                 "Name": "99 Spring St Central KarPark"
             },
             "geometry": {
@@ -134,8 +137,9 @@
         },
         {
             "type": "Feature",
+            "id": 105,
             "properties": {
-                "id": 105,
+                "OBJECTID": 105,
                 "Name": "21 Durham St - Leased"
             },
             "geometry": {
@@ -174,8 +178,9 @@
         },
         {
             "type": "Feature",
+            "id": 106,
             "properties": {
-                "id": 106,
+                "OBJECTID": 106,
                 "Name": "82 Devonport Rd - leased"
             },
             "geometry": {
@@ -218,8 +223,9 @@
         },
         {
             "type": "Feature",
+            "id": 101,
             "properties": {
-                "id": 101,
+                "OBJECTID": 101,
                 "Name": "ANZ Building Parking"
             },
             "geometry": {
