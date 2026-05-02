@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', async function() {
-
-    setNavPanelHeight();
   
     const style = await fetch('https://basemaps.linz.govt.nz/v1/tiles/topographic/3857/style/topographic.json?api=REMOVED').then(r => r.json());
 
@@ -111,16 +109,17 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 const btnFilter = document.getElementById("btnFilter");
 const filterPanel = document.getElementById("filterPanel");
+setPanelPos();
 
 btnFilter.addEventListener("click", () => {
     filterPanel.classList.toggle('open');
 });
 
 window.addEventListener('resize', () => {
-    setNavPanelHeight();
+    setPanelPos();
 });
 
-function setNavPanelHeight() {
+function setPanelPos() {
     const navHeight = document.querySelector(".topnav").offsetHeight;
     filterPanel.style.top = navHeight + 'px';
 }
