@@ -30,6 +30,7 @@ h1 {
     padding: .5em;
     background-color: #264f93;
     color: white;
+    margin-block: none;
 }
 
 header {
@@ -41,8 +42,7 @@ header {
 }
 
 .nav-icon, .topnav input {
-    display: block;
-    float: left;
+    display: inline-block;
 }
 
 .nav-icon {
