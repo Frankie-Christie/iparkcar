@@ -62,7 +62,7 @@ header {
     font-size: larger;
     padding: 0px .8em;
     margin: 1em;
-    width:max-content;
+    flex: 1;
 }
 
 /* mobile display adjustments */
