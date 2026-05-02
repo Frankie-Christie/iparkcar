@@ -25,10 +25,18 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     //fetch layers from geojson i cached from gis.tauranga.govt.nz' api: car parks, parking buildings, off street parking (waikato uni), mobility parking
     //can also get bus stops, public toilets, bins, etc later if i want
-    const [mobility_parking, car_parks] = await Promise.all([
+    //also extra carparks i located and drew myself in QGIS
+    const [mobility_parking, car_parks, extra_carparks] = await Promise.all([
         fetch('./geojson/mobility.json').then(r => r.json()),
-        fetch('./geojson/carparks.json').then(r => r.json())
+        fetch('./geojson/carparks.json').then(r => r.json()),
+        fetch('./geojson/extra_carparks.json').then(r => r.json())
     ]);
+
+    //combine car park polygons to be drawn
+    const combined = {
+        type: 'FeatureCollection',
+        features: [...car_parks.features, ...extra_carparks.features]
+    };
 
     //set mobility park icon
     const icon = new Image(32, 32);
@@ -38,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     map.on('load', () => {
 
         // --- car parks ---
-        map.addSource('car-parks', { type: 'geojson', data: car_parks });
+        map.addSource('car-parks', { type: 'geojson', data: combined });
 
         map.addLayer({
             id: 'car-parks-fill',
