@@ -107,3 +107,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         map.on('mouseleave', 'mobility-icons', () => map.getCanvas().style.cursor = '');
     });
 });
+
+const btnFilter = document.getElementById("btnFilter");
+
+btnFilter.addEventListener("click", () => {
+    const filterPanel = document.querySelector('.panel');
+    filterPanel.classList.toggle('open');
+});
+
+window.addEventListener('resize', () => {
+    const navHeight = document.querySelector('header').offsetHeight;
+    filterPanel.style.top = navHeight + 'px';
+});
+    
