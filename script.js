@@ -109,19 +109,26 @@ document.addEventListener('DOMContentLoaded', async function() {
     requestAnimationFrame(setPanelPos);
 });
 
-const btnFilter = document.getElementById("btnFilter");
-const filterPanel = document.getElementById("filterPanel");
+const btnFilter = document.getElementById('btnFilter');
+const btnMenu = document.getElementById('btnMenu');
+const filterPanel = document.getElementById('filterPanel');
+const menuPanel = document.getElementById('menuPanel');
 
-btnFilter.addEventListener("click", () => {
+btnFilter.addEventListener('click', () => {
     filterPanel.classList.toggle('open');
 });
+
+btnMenu.addEventListener('click', () => {
+    menuPanel.classList.toggle('open');
+})
 
 window.addEventListener('resize', () => {
     setPanelPos();
 });
 
 function setPanelPos() {
-    const navHeight = document.querySelector(".topnav").offsetHeight;
+    const navHeight = document.querySelector('.topnav').offsetHeight;
     filterPanel.style.top = navHeight + 'px';
+    menuPanel.style.top = navHeight + 'px';
 }
     
