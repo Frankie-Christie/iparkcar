@@ -60,7 +60,7 @@ header {
     border: none;
     border-radius: .5em;
     font-size: larger;
-    padding-left: .8em;
+    padding-left: 0px .8em
 }
 
 /* mobile display adjustments */
