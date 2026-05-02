@@ -22,7 +22,7 @@ body {
     display: flex;
     background-color: #264f93;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100vw;
 }
 
