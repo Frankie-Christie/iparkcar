@@ -23,6 +23,7 @@ body {
     align-content: center;
     justify-content: center;
     width: 100vw;
+    padding: 1em;
 }
 
 h1 {
@@ -56,7 +57,8 @@ header {
 .topnav input[type=text] {
     border: none;
     border-radius: .5em;
-    margin: auto, 0px
+    margin: auto 0px;
+    font-size: large;
 }
 
 /* mobile display adjustments */
