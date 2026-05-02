@@ -60,7 +60,8 @@ header {
     border: none;
     border-radius: .5em;
     font-size: larger;
-    padding: 0px .8em
+    padding: 0px .8em;
+    margin: .5em;
 }
 
 /* mobile display adjustments */
