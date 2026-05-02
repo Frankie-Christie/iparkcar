@@ -31,15 +31,11 @@ h1 {
     margin: 0px;
     padding: .5em;
     background-color: #264f93;
-    color: white;
+    color: #e4edfc;
 }
 
 header {
     width: 100vw;
-}
-
-.header-icon {
-    height: 4em;
 }
 
 .nav-icon, .topnav input {
