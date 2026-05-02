@@ -105,11 +105,12 @@ document.addEventListener('DOMContentLoaded', async function() {
         map.on('mouseenter', 'mobility-icons', () => map.getCanvas().style.cursor = 'pointer');
         map.on('mouseleave', 'mobility-icons', () => map.getCanvas().style.cursor = '');
     });
+
+    requestAnimationFrame(setPanelPos);
 });
 
 const btnFilter = document.getElementById("btnFilter");
 const filterPanel = document.getElementById("filterPanel");
-setPanelPos();
 
 btnFilter.addEventListener("click", () => {
     filterPanel.classList.toggle('open');
