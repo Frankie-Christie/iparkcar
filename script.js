@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 const btnFilter = document.getElementById("btnFilter");
+const filterPanel = document.querySelector('.panel');
 
 btnFilter.addEventListener("click", () => {
-    const filterPanel = document.querySelector('.panel');
     filterPanel.classList.toggle('open');
 });
 
