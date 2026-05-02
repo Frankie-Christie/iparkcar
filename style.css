@@ -71,14 +71,26 @@ header {
 
 .panel {
     position: absolute;
-    left: 0;
-    width: 100vw;
     background: white;
-    transform: translateY(-100%);
+    left: 0;
     transition: transform 0.3s ease;
     z-index: 999;
 }
 
-.panel.open {
+.panel-left {
+    width: fit-content;
+    transform: translateX(-100%);
+}
+
+.panel-top {
+    width: 100vw;
+    transform: translateY(-100%);
+}
+
+.panel-top.open {
     transform: translateY(0);
+}
+
+.panel-left.open {
+    transform: translateX(0);
 }
