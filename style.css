@@ -3,7 +3,7 @@
 }
 
 body {
-    padding: none;
+    padding: 0px;
 }
 
 #map {
@@ -26,11 +26,10 @@ body {
 
 h1 {
     width: 100%;
-    margin: none;
+    margin: 0px;
     padding: .5em;
     background-color: #264f93;
     color: white;
-    margin-block: none;
 }
 
 header {
