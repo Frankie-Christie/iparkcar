@@ -45,11 +45,11 @@ header {
 .nav-icon, .topnav input {
     display: inline-block;
     margin: .5em;
-    padding: .5em;
 }
 
 .nav-icon {
     height: 4em;
+    padding: .5em;
 }
 
 .nav-icon:hover {
@@ -60,6 +60,7 @@ header {
     border: none;
     border-radius: .5em;
     font-size: larger;
+    padding-left: .8em;
 }
 
 /* mobile display adjustments */
