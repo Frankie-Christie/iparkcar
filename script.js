@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 const btnFilter = document.getElementById("btnFilter");
-const filterPanel = document.querySelector('.panel');
+const filterPanel = document.getElementById("filterPanel");
 
 btnFilter.addEventListener("click", () => {
     filterPanel.classList.toggle('open');
@@ -122,7 +122,7 @@ window.addEventListener('resize', () => {
 });
 
 function setNavPanelHeight() {
-    const navHeight = document.querySelector('header').offsetHeight;
+    const navHeight = document.querySelector(".topnav").offsetHeight;
     filterPanel.style.top = navHeight + 'px';
 }
     
