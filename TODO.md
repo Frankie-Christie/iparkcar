@@ -4,7 +4,8 @@
 - [x] add mobility icons
 - [ ] correct missing data using google maps. e.g. cost per hour & time limits, etc
 - [x] add street labels
-- [ ] draw polygons for kerbside parking and privately owned - [ ] parking lots (scamalots)
+- [ ] draw polygons for kerbside parking
+- [x] draw polygons for privately owned parking lots (scamalots)
 - [ ] configure clicking = occupied behaviour
 - [ ] set up some dummy data or try to get real parking meter data (99% likely no public access)
 - [x] resize map and add header & navbar. hide header for mobile
