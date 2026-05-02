@@ -23,7 +23,6 @@ body {
     align-content: center;
     justify-content: center;
     width: 100vw;
-    padding: 1em;
 }
 
 h1 {
@@ -44,6 +43,8 @@ header {
 
 .nav-icon, .topnav input {
     display: inline-block;
+    margin: .5em;
+    padding: .5em;
 }
 
 .nav-icon {
@@ -58,7 +59,7 @@ header {
     border: none;
     border-radius: .5em;
     margin: auto 0px;
-    font-size: large;
+    font-size: larger;
 }
 
 /* mobile display adjustments */
