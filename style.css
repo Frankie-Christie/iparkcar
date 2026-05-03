@@ -92,7 +92,7 @@ header {
     width: 100vw;
     transition: bottom 0.3s ease;
     background-color: transparent;
-    margin: 0px;
+    padding: 0px;
 }
 
 .panel-top.open {
