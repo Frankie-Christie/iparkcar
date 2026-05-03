@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         btn.addEventListener('click', () => {
             if (btn.classList.contains('active')) {
                 bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
+                btn.classList.remove('active');
             } else {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
