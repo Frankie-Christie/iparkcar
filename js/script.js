@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     const filterPanel = document.getElementById('filterPanel');
     const menuPanel = document.getElementById('menuPanel');
     const bottomPanel = document.getElementById('bottomPanel');
+    const tabHeight = document.getElementById('bottomTabs').offsetHeight;
+    const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
 
     //set default date in filter date/time picker
     const now = new Date();
@@ -27,8 +29,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     })
 
     function setPanelPos() {
-        const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
-        const tabHeight = document.getElementById('bottomTabs').offsetHeight;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
         bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
