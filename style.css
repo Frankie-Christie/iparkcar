@@ -110,6 +110,58 @@ header {
     z-index: 998;
 }
 
+/*  bottom panel */
+
+.panel-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: .75em;
+    border: none;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid #264f93;
+    font-weight: bold;
+    color: #264f93;
+}
+
+.tab-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: .1em .4em;
+    font-size: .75em;
+}
+
+.tab-content {
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-btn {
+    border: 1px solid #264f93;
+    background: none;
+    color: #264f93;
+    border-radius: .3em;
+    padding: .2em .5em;
+    cursor: pointer;
+}
+
 /* Menu styling*/
 
 .menu {

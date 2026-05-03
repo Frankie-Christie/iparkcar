@@ -38,11 +38,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 
     requestAnimationFrame(setPanelPos);
-});
 
-const visibleHeight = window.visualViewport.height;
-window.visualViewport.addEventListener('resize', () => {
-    //set bottom panel position specifically if duckduckgo 
-    //keeps giving issues on mobile with the obstructive lower menu bar
-})
-    
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.remove('hidden');
+        });
+    });
+});

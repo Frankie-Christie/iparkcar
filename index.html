@@ -49,30 +49,31 @@
                 <li>Feedback</li>
             </ul>
         </div>
-        <div class="panel panel-bottom">
-            <div class="dashboard">
+        <div class="panel panel-bottom" id="bottomPanel">
+            <div class="panel-tabs">
+                <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+                <button class="tab-btn" data-tab="alerts">Alerts <span class="badge" id="alertBadge">3</span></button>
+            </div>
+            <div class="tab-content" id="dashboard">
                 <div class="busymeter">
                     <p>busymetre here</p>
                 </div>
-                <div class="sortBy">
-                    <form>
-                        <fieldset>
-                            <legend>Sort by</legend>
-                            <label><input type="radio" name="sort" value="cost"> Lowest cost</label><br>
-                            <label><input type="radio" name="sort" value="closest"> Closest</label><br>
-                            <label><input type="radio" name="sort" value="availability"> Availability</label><br>
-                        </fieldset>
-                    </form>
-                </div>
+                <fieldset>
+                    <legend>Sort by</legend>
+                    <label><input type="radio" name="sort" value="cost"> Lowest cost</label><br>
+                    <label><input type="radio" name="sort" value="closest"> Closest</label><br>
+                    <label><input type="radio" name="sort" value="availability"> Availability</label><br>
+                </fieldset>
             </div>
-            <div class="alerts">
+            <div class="tab-content hidden" id="alerts">
                 <div class="current">
-                    <span class="inline"><h2>Currently active</h2><img id="btnAlertFilter" class="nav-icon" src="icons/filter.png"></span><br>
-                    <p>yo mama so fat she caused a sinkhole on 2nd Ave</p>
-                </div><br>
+                    <h2>Currently active</h2>
+                    <p>Closure on 2nd Ave <button class="show-btn">Show</button></p>
+                    <p>Spring St PB price increase <button class="show-btn">Show</button></p>
+                </div>
                 <div class="past">
-                    <h2>Past alerts</h2><br>
-                    <p>yo somebody ated the zebra crossing but dont worry we fixed it</p>
+                    <h2>Past alerts</h2>
+                    <p>New parking lot on Wharf St</p>
                 </div>
             </div>
         </div>
