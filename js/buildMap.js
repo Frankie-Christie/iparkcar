@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', async function() {
-  
+export async function buildMap() {
+    
     const style = await fetch('https://basemaps.linz.govt.nz/v1/tiles/topographic/3857/style/topographic.json?api=REMOVED').then(r => r.json());
 
     // keep only symbol layers (text labels)
@@ -113,37 +113,5 @@ document.addEventListener('DOMContentLoaded', async function() {
         map.on('mouseenter', 'mobility-icons', () => map.getCanvas().style.cursor = 'pointer');
         map.on('mouseleave', 'mobility-icons', () => map.getCanvas().style.cursor = '');
     });
-
-    requestAnimationFrame(setPanelPos);
-});
-
-const btnFilter = document.getElementById('btnFilter');
-const btnMenu = document.getElementById('btnMenu');
-const filterPanel = document.getElementById('filterPanel');
-const menuPanel = document.getElementById('menuPanel');
-
-//set default date in filter date/time picker
-const now = new Date();
-const taurangaTime = new Date(now.toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland' }));
-const pad = n => String(n).padStart(2, '0');
-const formatted = `${taurangaTime.getFullYear()}-${pad(taurangaTime.getMonth()+1)}-${pad(taurangaTime.getDate())}T${pad(taurangaTime.getHours())}:${pad(taurangaTime.getMinutes())}`;
-document.getElementById('datetime').value = formatted;
-
-btnFilter.addEventListener('click', () => {
-    filterPanel.classList.toggle('open');
-});
-
-btnMenu.addEventListener('click', () => {
-    menuPanel.classList.toggle('open');
-})
-
-window.addEventListener('resize', () => {
-    setPanelPos();
-});
-
-function setPanelPos() {
-    const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
-    filterPanel.style.top = navHeight + 'px';
-    menuPanel.style.top = navHeight + 'px';
+    return map;
 }
-    
