@@ -34,15 +34,11 @@ header {
 /* Navbar styling */
 
 .topnav {
-    display: flex;
+    display: inline-flex;
     background-color: #264f93;
     align-content: center;
     justify-content: space-between;
     width: 100vw;
-}
-
-.nav-icon, .topnav input {
-    display: inline-block;
 }
 
 .nav-icon {
@@ -71,7 +67,7 @@ header {
     }
 }
 
-/* Menu and filter panels */
+/* Menu, filter, dashboard and alert panels */
 .panel {
     position: absolute;
     background: #e4edfc;
@@ -91,7 +87,14 @@ header {
     transform: translateY(-100%);
 }
 
-.panel-top.open {
+.panel-bottom {
+    width: 100vw;
+    transform: translateY(100%);
+    display: inline-flex;
+    overflow-y: auto;
+}
+
+.panel-top.open, .panel-bottom.open {
     transform: translateY(0);
 }
 

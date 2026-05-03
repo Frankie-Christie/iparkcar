@@ -37,4 +37,10 @@ function setPanelPos() {
     filterPanel.style.top = navHeight + 'px';
     menuPanel.style.top = navHeight + 'px';
 }
+
+const visibleHeight = window.visualViewport.height;
+window.visualViewport.addEventListener('resize', () => {
+    //set bottom panel position specifically if duckduckgo 
+    //keeps giving issues on mobile with the obstructive lower menu bar
+})
     
