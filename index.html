@@ -25,14 +25,15 @@
         <!-- panels can't be map-overlay class because they have to go under the nav. -->
         <div class="panel panel-top" id="filterPanel">
             <form>
-                <label><input id="datetime" type="datetime-local"> Adjust date/time for when you want to park, for more accurate suggestions</label>
+                <label for="datetime">Adjust date/time for when you want to park, for more accurate suggestions</label>
+                <input id="datetime" type="datetime-local"> 
                 <fieldset>
                     <legend>Filter by type</legend>
-                    <label><input type="checkbox" value="free"> Free</label>
-                    <label><input type="checkbox" value="mobility"> Mobility</label>
-                    <label><input type="checkbox" value="TCC-paid"> Public paid (TCC owned)</label>
-                    <label><input type="checkbox" value="private-paid"> Private paid (scamalots)</label>
-                    <label><input type="checkbox" value="private-paid-lease"> Private paid monthly lease (double scamalots)</label>
+                    <label><input type="checkbox" value="free"> Free</label><br>
+                    <label><input type="checkbox" value="mobility"> Mobility</label><br>
+                    <label><input type="checkbox" value="TCC-paid"> Public paid (TCC owned)</label><br>
+                    <label><input type="checkbox" value="private-paid"> Private paid (scamalots)</label><br>
+                    <label><input type="checkbox" value="private-paid-lease"> Private paid monthly lease (double scamalots)</label><br>
                 </fieldset>
             </form>
         </div>
