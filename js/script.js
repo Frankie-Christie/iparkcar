@@ -42,11 +42,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.tab).classList.remove('hidden');
-            bottomPanel.classList.add('open');
+            if (btn.classList.contains('active')) {
+                bottomPanel.classList.remove('open');
+            } else {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.remove('hidden');
+                bottomPanel.classList.add('open');
+            }
         });
     });
 });
