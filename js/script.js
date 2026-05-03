@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         menuPanel.classList.toggle('open');
         filterPanel.classList.remove('open')
     })
+
+    function setPanelPos() {
+        const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
+        filterPanel.style.top = navHeight + 'px';
+        menuPanel.style.top = navHeight + 'px';
+        bottomPanel.style.bottom = window.height;
+    }
     
     window.addEventListener('resize', () => {
         setPanelPos();
@@ -32,14 +39,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     requestAnimationFrame(setPanelPos);
 });
-
-function setPanelPos() {
-    const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
-    filterPanel.style.top = navHeight + 'px';
-    menuPanel.style.top = navHeight + 'px';
-    bottomPanel.style.bottom = window.height;
-    
-}
 
 const visibleHeight = window.visualViewport.height;
 window.visualViewport.addEventListener('resize', () => {
