@@ -1,7 +1,7 @@
 import { buildMap } from "./buildMap.js";
 
 document.addEventListener('DOMContentLoaded', async function() {
-    buildMap();
+    await buildMap();
 
     const btnFilter = document.getElementById('btnFilter');
     const btnMenu = document.getElementById('btnMenu');
