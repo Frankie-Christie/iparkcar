@@ -74,7 +74,7 @@ header {
 /* Menu and filter panels */
 .panel {
     position: absolute;
-    background: white;
+    background: #e4edfc;
     left: 0;
     transition: transform 0.3s ease;
     z-index: 999;
@@ -105,14 +105,16 @@ header {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+    background-color: #e4edfc;
 }
 
 .menu li {
     display: block;
     padding: 1em;
+    background-color: #e4edfc;
 }
 
 .menu li:hover {
-    background-color: #f0f0f0;
+    background-color: #cbd5e7;
     cursor: pointer;
 }
