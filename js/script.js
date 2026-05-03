@@ -1,7 +1,7 @@
 import { buildMap } from './buildMap.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
-    await buildMap();
+    const map = await buildMap();
 
     const btnFilter = document.getElementById('btnFilter');
     const btnMenu = document.getElementById('btnMenu');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
-        bottomPanel.style.bottom = window.height;
+        bottomPanel.style.bottom = map.getBoundingClientRect().bottom;
     }
     
     window.addEventListener('resize', () => {
