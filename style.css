@@ -130,8 +130,8 @@ header {
     cursor: pointer;
     background-color: #264f93;
     color:#e4edfc;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 
 .tab-btn.active {

@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.addEventListener('click', (e) => {
         if (!bottomPanel.contains(e.target)) {
             bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
         }
     });
 });
