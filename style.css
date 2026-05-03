@@ -85,6 +85,7 @@ header {
 .panel-top {
     width: 100vw;
     transform: translateY(-100%);
+    padding: .6em;
 }
 
 .panel-bottom {

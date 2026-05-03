@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const btnMenu = document.getElementById('btnMenu');
     const filterPanel = document.getElementById('filterPanel');
     const menuPanel = document.getElementById('menuPanel');
+    const bottomPanel = document.querySelector(".panel-bottom");
 
     //set default date in filter date/time picker
     const now = new Date();
@@ -36,6 +37,8 @@ function setPanelPos() {
     const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
     filterPanel.style.top = navHeight + 'px';
     menuPanel.style.top = navHeight + 'px';
+    bottomPanel.style.bottom = window.height;
+    
 }
 
 const visibleHeight = window.visualViewport.height;
