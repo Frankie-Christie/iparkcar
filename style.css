@@ -101,7 +101,7 @@ header {
     transform: translateX(0);
 }
 
-.dashboard {
+.inline, .dashboard {
     display: inline-flex;
 }
 
