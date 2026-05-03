@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const tabHeight = document.getElementById('bottomTabs').offsetHeight;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
-        bottomPanel.style.bottom = -tabHeight + 'px';
+        bottomPanel.style.bottom = tabHeight + 'px';
     }
     
     window.addEventListener('resize', () => {
