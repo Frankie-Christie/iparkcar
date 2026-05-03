@@ -123,7 +123,7 @@ export async function buildMap() {
 
         const bounds = coords.reduce((b, c) => b.extend(c), new maplibregl.LngLatBounds(coords[0], coords[0]));
 
-        map.fitBounds(bounds, { padding: {top: 80, bottom: 80, left: 40, right: 40} });
+        map.fitBounds(bounds, { padding: {top: 150, bottom: 150, left: 40, right: 40} });
     });
     return map;
 }
