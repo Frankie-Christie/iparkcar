@@ -1,4 +1,4 @@
-import { buildMap } from "./buildMap.js";
+import { buildMap } from './buildMap.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
     await buildMap();
@@ -17,10 +17,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     btnFilter.addEventListener('click', () => {
         filterPanel.classList.toggle('open');
+        menuPanel.classList.remove('open');
     });
     
     btnMenu.addEventListener('click', () => {
         menuPanel.classList.toggle('open');
+        filterPanel.classList.remove('open')
     })
     
     window.addEventListener('resize', () => {
