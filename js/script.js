@@ -28,9 +28,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function setPanelPos() {
         const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
+        const tabHeight = document.querySelector('panel-tabs').offsetHeight;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
-        bottomPanel.style.bottom = 0 + 'px';
+        bottomPanel.style.bottom = -tabHeight + 'px';
     }
     
     window.addEventListener('resize', () => {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
             btn.classList.add('active');
             document.getElementById(btn.dataset.tab).classList.remove('hidden');
+            bottomPanel.classList.add('open');
         });
     });
 });
