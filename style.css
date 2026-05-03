@@ -90,7 +90,6 @@ header {
 .panel-bottom {
     width: 100vw;
     transform: translateY(100%);
-    display: inline-flex;
     overflow-y: auto;
 }
 
@@ -100,6 +99,14 @@ header {
 
 .panel-left.open {
     transform: translateX(0);
+}
+
+.alerts, .dashboard {
+    display: inline-flex;
+}
+
+.alerts {
+    z-index: 998;
 }
 
 /* Menu styling*/
