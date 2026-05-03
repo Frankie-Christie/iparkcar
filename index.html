@@ -22,8 +22,19 @@
                 <img id="btnFilter" class="nav-icon" src="icons/filter.png">
             </div>
         </div>
+        <!-- panels can't be map-overlay class because they have to go under the nav. -->
         <div class="panel panel-top" id="filterPanel">
-            <p>testing 123</p>
+            <form>
+                <label><input type="datetime-local"> Adjust date/time for when you want to park, for more accurate suggestions</label>
+                <fieldset>
+                    <legend>Filter by type</legend>
+                    <label><input type="checkbox" value="free"> Free</label>
+                    <label><input type="checkbox" value="mobility"> Mobility</label>
+                    <label><input type="checkbox" value="TCC-paid"> Public paid (TCC owned)</label>
+                    <label><input type="checkbox" value="private-paid"> Private paid (scamalots)</label>
+                    <label><input type="checkbox" value="private-paid-lease"> Private paid monthly lease (double scamalots)</label>
+                </fieldset>
+            </form>
         </div>
         <div class="panel panel-left" id="menuPanel">
             <p>testing 123</p>

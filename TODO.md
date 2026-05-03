@@ -20,3 +20,4 @@ extra:
 - [ ] add cycle compatability and bus stops
 - [ ] fake payment portal
 - [ ] add addresses
+- [ ] further correct and add more mobility park data - looks to be a bit outdated.
