@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
-        bottomPanel.style.bottom = window.visualViewport.height + 'px';
+        bottomPanel.style.bottom = window.visualViewport.bottom + 'px';
     }
     
     window.addEventListener('resize', () => {
