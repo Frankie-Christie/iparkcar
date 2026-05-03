@@ -54,4 +54,11 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
         });
     });
+
+    //collapse bttom panel when something else is clicked
+    document.addEventListener('click', (e) => {
+        if (!bottomPanel.contains(e.target)) {
+            bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
+        }
+    });
 });
