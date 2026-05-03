@@ -91,6 +91,7 @@ header {
 .panel-bottom {
     width: 100vw;
     transition: bottom 0.3s ease;
+    background-color: transparent;
 }
 
 .panel-top.open {
@@ -133,14 +134,9 @@ header {
 }
 
 .tab-btn.active {
-    border-bottom: 3px solid #264f93;
     font-weight: bold;
     color: #264f93;
     background-color: #e4edfc;
-}
-
-.tab-btn:hover {
-    background-color: #f0f0f0;
 }
 
 .badge {
