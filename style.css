@@ -91,7 +91,7 @@ header {
 .panel-bottom {
     width: 100vw;
     transition: bottom 0.3s ease;
-    overflow-y: auto;
+    background-color: #e4edfc;
 }
 
 .panel-top.open {
@@ -107,7 +107,7 @@ header {
 }
 
 .alerts {
-    z-index: 998;
+    overflow-y: auto;
 }
 
 /*  bottom panel */
