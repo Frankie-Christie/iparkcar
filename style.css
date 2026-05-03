@@ -18,14 +18,6 @@ body {
     z-index: 1000; /* above the map tiles */
 }
 
-.topnav {
-    display: flex;
-    background-color: #264f93;
-    align-content: center;
-    justify-content: space-between;
-    width: 100vw;
-}
-
 h1 {
     width: 100vw;
     margin: 0px;
@@ -36,6 +28,16 @@ h1 {
 
 /* TODO LATER: for desktop, put h1 to left of menu icon, background light blue and border radius.*/
 header {
+    width: 100vw;
+}
+
+/* Navbar styling */
+
+.topnav {
+    display: flex;
+    background-color: #264f93;
+    align-content: center;
+    justify-content: space-between;
     width: 100vw;
 }
 
@@ -69,12 +71,14 @@ header {
     }
 }
 
+/* Menu and filter panels */
 .panel {
     position: absolute;
     background: white;
     left: 0;
     transition: transform 0.3s ease;
     z-index: 999;
+    padding: .3em;
 }
 
 .panel-left {
@@ -93,4 +97,20 @@ header {
 
 .panel-left.open {
     transform: translateX(0);
+}
+
+/* Menu styling*/
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    display: block;
+    padding: 1em;
+}
+
+.menu li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
