@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function setPanelPos() {
         const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
-        const tabHeight = document.querySelector('panel-tabs').getBoundingClientRect().height;
+        const tabHeight = document.getElementById('bottomTabs').offsetHeight;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
         bottomPanel.style.bottom = -tabHeight + 'px';
