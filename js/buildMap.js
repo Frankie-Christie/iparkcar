@@ -112,6 +112,18 @@ export async function buildMap() {
 
         map.on('mouseenter', 'mobility-icons', () => map.getCanvas().style.cursor = 'pointer');
         map.on('mouseleave', 'mobility-icons', () => map.getCanvas().style.cursor = '');
+
+        // --- make sure map loads with all features within view ---
+        const allFeatures = [...combined.features, ...mobility_parking.features];
+        const coords = allFeatures.flatMap(f => 
+            f.geometry.type === 'Point' 
+                ? [f.geometry.coordinates] 
+                : f.geometry.coordinates[0]
+        );
+
+        const bounds = coords.reduce((b, c) => b.extend(c), new maplibregl.LngLatBounds(coords[0], coords[0]));
+
+        map.fitBounds(bounds, { padding: 40 });
     });
     return map;
 }
