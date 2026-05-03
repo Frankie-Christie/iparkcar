@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const btnMenu = document.getElementById('btnMenu');
     const filterPanel = document.getElementById('filterPanel');
     const menuPanel = document.getElementById('menuPanel');
-    const bottomPanel = document.querySelector(".panel-bottom");
+    const bottomPanel = document.getElementById('bottomPanel');
 
     //set default date in filter date/time picker
     const now = new Date();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const tabHeight = document.getElementById('bottomTabs').offsetHeight;
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
-        bottomPanel.style.bottom = tabHeight + 'px';
+        bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
     }
     
     window.addEventListener('resize', () => {
@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             if (btn.classList.contains('active')) {
-                bottomPanel.classList.remove('open');
+                bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
             } else {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
                 btn.classList.add('active');
                 document.getElementById(btn.dataset.tab).classList.remove('hidden');
-                bottomPanel.classList.add('open');
+                bottomPanel.style.bottom = 0 + 'px';
             }
         });
     });

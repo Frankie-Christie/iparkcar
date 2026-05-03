@@ -90,11 +90,11 @@ header {
 
 .panel-bottom {
     width: 100vw;
-    transform: translateY(100%);
+    transition: bottom 0.3s ease;
     overflow-y: auto;
 }
 
-.panel-top.open, .panel-bottom.open {
+.panel-top.open {
     transform: translateY(0);
 }
 
