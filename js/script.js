@@ -1,4 +1,4 @@
-import { buildMap } from "./buildMap";
+import { buildMap } from "./buildMap.js";
 
 document.addEventListener('DOMContentLoaded', async function() {
     buildMap();
