@@ -85,6 +85,7 @@ header {
 .panel-right {
     width: 100%;
     transform: translateX(100%);
+    z-index: 998;
 }
 
 .panel-top {
@@ -210,4 +211,18 @@ header {
 
 h4 {
     padding-bottom: 0px;
+}
+
+.feedback-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.feedback-link:hover {
+    background: #0056b3;
 }
