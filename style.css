@@ -104,7 +104,7 @@ header {
 }
 
 .inline, #dashboard {
-    display: inline-flex;
+    display: flex;
 }
 
 .icon {
@@ -112,7 +112,7 @@ header {
 }
 
 .dashboard-item {
-    width: 50%;
+    flex: 1;
 }
 
 .alerts {
