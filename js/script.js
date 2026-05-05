@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const filterPanel = document.getElementById('filterPanel');
     const menuPanel = document.getElementById('menuPanel');
     const bottomPanel = document.getElementById('bottomPanel');
+    const menuItemPanel = document.getElementById('menuItem');
     const tabHeight = document.getElementById('bottomTabs').offsetHeight;
     const navHeight = document.querySelector('.topnav').getBoundingClientRect().bottom;
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     function setPanelPos() {
         filterPanel.style.top = navHeight + 'px';
         menuPanel.style.top = navHeight + 'px';
+        menuItemPanel.style.top = navHeight + 'px';
         bottomPanel.style.bottom = (tabHeight - bottomPanel.offsetHeight) + 'px';
     }
     
@@ -39,6 +41,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 
     requestAnimationFrame(setPanelPos);
+
+    document.querySelectorAll('.menuItem').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const choice = btn.innerHTML;
+            //call different function based on each choice
+            menuPanel.classList.remove('open')
+            menuItemPanel.classList.add('open');
+        });
+    });
 
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
