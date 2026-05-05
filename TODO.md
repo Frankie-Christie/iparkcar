@@ -11,7 +11,7 @@
 - [ ] add menu items
 - [ ] add filtering behaviour
 - [ ] add busy-metre
-- [ ] check styling is properly responsive
+- [x] check styling is properly responsive
 - [ ] add survey
 
 extra:

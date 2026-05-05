@@ -111,6 +111,10 @@ header {
     height: 8em;
 }
 
+.dashboard-item {
+    width: 50%;
+}
+
 .alerts {
     overflow-y: auto;
 }
