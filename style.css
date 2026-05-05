@@ -82,6 +82,11 @@ header {
     transform: translateX(-100%);
 }
 
+.panel-right {
+    width: 100%;
+    transform: translateX(100%);
+}
+
 .panel-top {
     width: 100vw;
     transform: translateY(-100%);
@@ -100,6 +105,10 @@ header {
 }
 
 .panel-left.open {
+    transform: translateX(0);
+}
+
+.panel-right.open {
     transform: translateX(0);
 }
 
