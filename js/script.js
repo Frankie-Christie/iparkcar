@@ -22,11 +22,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     btnFilter.addEventListener('click', () => {
         filterPanel.classList.toggle('open');
         menuPanel.classList.remove('open');
+        menuItemPanel.classList.remove('open');
     });
     
     btnMenu.addEventListener('click', () => {
         menuPanel.classList.toggle('open');
         filterPanel.classList.remove('open')
+        menuItemPanel.classList.remove('open');
     })
 
     function setPanelPos() {
