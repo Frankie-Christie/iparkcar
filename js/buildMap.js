@@ -147,7 +147,7 @@ export async function buildMap() {
             if (p.location == "City centre") {
                 price = "$2 per hour for the first 2 hours; $5 per additional hour afterward";
             } else if (p.location == "City centre fringe") {
-                price = "City Centre fringe is $1 per hour for the first 2 hours; $2 per additional hour afterward. Maximum daily charge — $10.00. No payment is required if parking for 20 minutes or less";
+                price = "City Centre fringe is $1 per hour for the first 2 hours; $2 per additional hour afterward. Maximum daily charge — $10.00. No payment is required if parking for 20 minutes or less.";
             } else {
                 price = "Free";
             }
