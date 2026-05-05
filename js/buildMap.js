@@ -30,7 +30,7 @@ export async function buildMap() {
         fetch('./geojson/mobility.json').then(r => r.json()),
         fetch('./geojson/carparks.json').then(r => r.json()),
         fetch('./geojson/extra_carparks.json').then(r => r.json()),
-        fetch('./geojson/onstreet_parks.json').then(r => r.json())
+        fetch('./geojson/updated_parking.json').then(r => r.json())
     ]);
 
     //combine car park polygons to be drawn

@@ -194,3 +194,11 @@ header {
     background-color: #cbd5e7;
     cursor: pointer;
 }
+
+.center-text {
+    text-align: center;
+}
+
+h4 {
+    padding-bottom: 0px;
+}
