@@ -141,14 +141,16 @@ export async function buildMap() {
         map.on('click', 'onstreet-fill', (e) => {
             const feature = e.features[0];
             const p = feature.properties;
+            const paid = p.paid ? 'Yes' : 'No';
+            const time = p['time-restr'] ? 'Yes' : 'No';
 
             new maplibregl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(`
                     <b>Onstreet parking</b><br>
                     Location: ${p.location ?? 'Unknown'}<br>
-                    Paid: ${p.paid ?? 'Unknown'}<br>
-                    Time restriction: ${p.paid}
+                    Paid: ${paid ?? 'Unknown'}<br>
+                    Time restriction: ${time ?? 'Unknown'}
                 `)
                 .addTo(map);
         });
