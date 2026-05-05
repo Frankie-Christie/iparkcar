@@ -143,7 +143,7 @@ export async function buildMap() {
             const p = feature.properties;
             const paid = p.paid ? 'Yes' : 'No';
             const time = p['time-restr'] ? 'Yes' : 'No';
-            const price = 0;
+            let price = 0;
             if (p.location == "City centre") {
                 price = "$2 per hour for the first 2 hours; $5 per additional hour afterward";
             } else if (p.location == "City centre fringe") {
