@@ -86,6 +86,7 @@ header {
     width: 100%;
     transform: translateX(100%);
     z-index: 998;
+    height: 100vh;
 }
 
 .panel-top {
