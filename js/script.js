@@ -44,20 +44,33 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     requestAnimationFrame(setPanelPos);
 
-    const menuFunc = {
-        "Settings" : settings,
-        "Tutorial" : tutorial,
-        "Payment History" : paymentHistory,
-        "Alerts" : alerts,
-        "Report a bug" : reportBug,
-        "Acknowledgements" : acknowledgements,
-        "Feedback" : feedback,
-    }
-
     document.querySelectorAll('.menuItem').forEach(btn => {
         btn.addEventListener('click', () => {
-            const choice = btn.innerHTML;
-            menuFunc[choice]();
+            switch(btn.id) {
+                case "settings":
+                    settings();
+                    break;
+                case "tutorial":
+                    tutorial();
+                    break;
+                case "payment":
+                    paymentHistory();
+                    break;
+                case "acknowledgements":
+                    acknowledgements();
+                    break;
+                case "alerts":
+                    alerts();
+                    break;
+                case "report":
+                    reportBug();
+                    break;
+                case "feedback":
+                    feedback();
+                    break;
+                default:
+                    feedback()
+            }
             menuPanel.classList.remove('open')
             menuItemPanel.classList.add('open');
         });
@@ -247,7 +260,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     
                 <p>
                     Concept developed by Tauranga Parking WAIKT363 Impact Lab team. 
-                    [member names here]
+                    [Michael Watson, Ayush Narayan, Amber Treadaway, Frankie Christie]
                 </p>
     
                 <p>Website designed and created by Frankie Christie.</p>
