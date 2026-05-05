@@ -36,7 +36,7 @@ export async function buildMap() {
     //combine car park polygons to be drawn
     const combined = {
         type: 'FeatureCollection',
-        features: [...car_parks.features, ...extra_carparks.features, ...onstreet_parks.features]
+        features: [...car_parks.features, ...extra_carparks.features]
     };
 
     //set mobility park icon
@@ -114,8 +114,50 @@ export async function buildMap() {
         map.on('mouseenter', 'mobility-icons', () => map.getCanvas().style.cursor = 'pointer');
         map.on('mouseleave', 'mobility-icons', () => map.getCanvas().style.cursor = '');
 
+        //--- onstreet parking ---
+        map.addSource('onstreet', { type: 'geojson', data: onstreet_parks });
+
+        map.addLayer({
+            id: 'onstreet-fill',
+            type: 'fill',
+            source: 'onstreet',
+            paint: {
+                'fill-color': 'green',
+                'fill-opacity': 0.4
+            }
+        });
+
+        map.addLayer({
+            id: 'onstreet-outline',
+            type: 'line',
+            source: 'onstreet',
+            paint: {
+                'line-color': 'green',
+                'line-width': 2
+            }
+        });
+
+        // click behaviour
+        map.on('click', 'onstreet-fill', (e) => {
+            const feature = e.features[0];
+            const p = feature.properties;
+
+            new maplibregl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(`
+                    <b>Onstreet parking</b><br>
+                    Location: ${p.location ?? 'Unknown'}<br>
+                    Paid: ${p.paid ?? 'Unknown'}<br>
+                    Time restriction: ${p.paid}
+                `)
+                .addTo(map);
+        });
+
+        map.on('mouseenter', 'onstreet-fill', () => map.getCanvas().style.cursor = 'pointer');
+        map.on('mouseleave', 'onstreet-fill', () => map.getCanvas().style.cursor = '');
+
         // --- make sure map loads with all features within view ---
-        const allFeatures = [...combined.features, ...mobility_parking.features];
+        const allFeatures = [...combined.features, ...mobility_parking.features, ...onstreet_parks.features];
         const coords = allFeatures.flatMap(f => 
             f.geometry.type === 'Point' 
                 ? [f.geometry.coordinates] 
