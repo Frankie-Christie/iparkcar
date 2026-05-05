@@ -8,11 +8,11 @@
 - [x] draw polygons for privately owned parking lots (scamalots)
 - [ ] set up some dummy data or try to implement computer vision example
 - [x] resize map and add header & navbar. hide header for mobile
-- [ ] add menu items
+- [x] add menu items
 - [ ] add filtering behaviour
-- [ ] add busy-metre
+- [x] add busy-metre
 - [x] check styling is properly responsive
-- [ ] add survey
+- [x] add survey
 
 extra:
 - [ ] add cycle compatability and bus stops

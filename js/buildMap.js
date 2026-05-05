@@ -143,13 +143,22 @@ export async function buildMap() {
             const p = feature.properties;
             const paid = p.paid ? 'Yes' : 'No';
             const time = p['time-restr'] ? 'Yes' : 'No';
+            const price = 0;
+            if (p.location == "City centre") {
+                price = "$2 per hour for the first 2 hours; $5 per additional hour afterward";
+            } else if (p.location == "City centre fringe") {
+                price = "City Centre fringe is $1 per hour for the first 2 hours; $2 per additional hour afterward. Maximum daily charge — $10.00. No payment is required if parking for 20 minutes or less";
+            } else {
+                price = "Free";
+            }
 
             new maplibregl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(`
                     <b>Onstreet parking</b><br>
                     Location: ${p.location ?? 'Unknown'}<br>
-                    Paid: ${paid ?? 'Unknown'}<br>
+                    Price: ${price ?? 'Unknown'}<br>
+                    ${p.location !== "Outer CBD" ? "Free from 5pm - 8am on weekdays. Free all weekend and public holidays." : ""}<br>
                     Time restriction: ${time ?? 'Unknown'}
                 `)
                 .addTo(map);
