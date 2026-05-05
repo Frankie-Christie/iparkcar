@@ -107,6 +107,10 @@ header {
     display: inline-flex;
 }
 
+.icon {
+    height: 8em;
+}
+
 .alerts {
     overflow-y: auto;
 }
