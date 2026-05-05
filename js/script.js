@@ -97,23 +97,19 @@ document.addEventListener('DOMContentLoaded', async function() {
 
                 <h3>Transport Mode</h3>
                 <p style="color:#666; font-size:14px;">
-                    Current: <strong>${currentTransportMode}</strong>
+                    Current: <strong>car</strong>
                 </p>
 
                 <div style="display:flex; flex-direction:column; gap:8px; max-width:200px;">
-                    <button onclick="setTransportMode('car')">🚗 Car</button>
-                    <button onclick="setTransportMode('motorbike')">🏍️ Motorbike</button>
-                    <button onclick="setTransportMode('bicycle')">🚲 Bicycle</button>
-                    <button onclick="setTransportMode('e-scooter')">🛴 E-Scooter</button>
+                    <button>🚗 Car</button>
+                    <button>🏍️ Motorbike</button>
+                    <button>🚲 Bicycle</button>
+                    <button>🛴 E-Scooter</button>
                 </div>
             </div>
         `;
     }
 
-    function setTransportMode(mode) {
-        currentTransportMode = mode;
-        settings(); // refresh UI to show updated selection
-    }
 
     function tutorial() {
         menuItemPanel.innerHTML = `
