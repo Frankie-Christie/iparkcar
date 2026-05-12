@@ -99,13 +99,10 @@ document.addEventListener('DOMContentLoaded', async function() {
                 btn.classList.remove('active');
             });
         }
-        if (!menuPanel.contains(e.target)) {
+        if (!menuPanel.contains(e.target) && !btnMenu.contains(e.target)) {
             menuPanel.classList.remove('open');
         }
-        if (!menuItemPanel.contains(e.target)) {
-            menuItemPanel.classList.remove('open');
-        }
-        if (!filterPanel.contains(e.target)) {
+        if (!filterPanel.contains(e.target) && !btnFilter.contains(e.target)) {
             filterPanel.classList.remove('open');
         }
     });
