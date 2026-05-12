@@ -100,7 +100,6 @@ header {
     transition: bottom 0.3s ease;
     background-color: transparent;
     padding: 0px;
-    overflow-y: auto;
 }
 
 .panel-top.open {
