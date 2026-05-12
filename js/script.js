@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 document.getElementById(btn.dataset.tab).classList.remove('hidden');
                 bottomPanel.style.bottom = 0 + 'px';
             }
+            menuItemPanel.classList.remove('open');
         });
     });
 
