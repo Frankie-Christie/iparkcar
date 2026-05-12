@@ -106,6 +106,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (!filterPanel.contains(e.target) && !btnFilter.contains(e.target)) {
             filterPanel.classList.remove('open');
         }
+        if (!menuItemPanel.contains(e.target) && !menuPanel.contains(e.target)) {
+            menuItemPanel.classList.remove('open');
+        }
     });
 
     //dynamically size bottom tabs to shortest tab
