@@ -99,6 +99,15 @@ document.addEventListener('DOMContentLoaded', async function() {
                 btn.classList.remove('active');
             });
         }
+        if (!menuPanel.contains(e.target)) {
+            menuPanel.classList.remove('open');
+        }
+        if (!menuItemPanel.contains(e.target)) {
+            menuItemPanel.classList.remove('open');
+        }
+        if (!filterPanel.contains(e.target)) {
+            filterPanel.classList.remove('open');
+        }
     });
 
     //dynamically size bottom tabs to shortest tab
