@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const dashboard = document.getElementById('dashboard');
     let maxHeight = dashboard.offsetHeight;
     document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.style.height = maxHeight;
+        tab.style.height = maxHeight + 'px';
     });
 
 
