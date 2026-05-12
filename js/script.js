@@ -102,10 +102,11 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 
     //dynamically size bottom tabs to shortest tab
-    const tab =  document.querySelector('.tab-btn');
     const dashboard = document.getElementById('dashboard');
-    let maxHeight = dashboard.offsetHeight + tab.offsetHeight;
-    document.getElementById('bottomPanel').style.height = maxHeight + 'px';
+    let maxHeight = dashboard.offsetHeight;
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.height = maxHeight;
+    });
 
 
     //menu item html
