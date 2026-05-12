@@ -1,6 +1,8 @@
+import 'dotenv/config';
+
 export async function buildMap() {
     
-    const style = await fetch('https://basemaps.linz.govt.nz/v1/tiles/topographic/3857/style/topographic.json?api=REMOVED').then(r => r.json());
+    const style = await fetch(`https://basemaps.linz.govt.nz/v1/tiles/topographic/3857/style/topographic.json?api=${process.env.LINZ_key}`).then(r => r.json());
 
     // keep only symbol layers (text labels)
     style.layers = style.layers.filter(l => l.type === 'symbol');
@@ -8,7 +10,7 @@ export async function buildMap() {
     // add aerial as first source
     style.sources.aerial = {
         type: 'raster',
-        tiles: ['https://basemaps.linz.govt.nz/v1/tiles/aerial/3857/{z}/{x}/{y}.webp?api=REMOVED'],
+        tiles: [`https://basemaps.linz.govt.nz/v1/tiles/aerial/3857/{z}/{x}/{y}.webp?api=${process.env.LINZ_key}`],
         tileSize: 256,
         maxzoom: 22
     };
