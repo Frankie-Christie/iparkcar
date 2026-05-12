@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 case "acknowledgements":
                     acknowledgements();
                     break;
-                case "alerts":
+                case "alertMenu":
                     alerts();
                     break;
                 case "report":
