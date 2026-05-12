@@ -101,6 +101,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
+    //dynamically size bottom tabs to shortest tab
+    const dashboard = document.getElementById('dashboard');
+    let maxHeight = dashboard.offsetHeight;
+    document.getElementById('bottomPanel').style.height = maxHeight + 'px';
+
+
+    //menu item html
     let currentTransportMode = "car";
 
     function settings() {

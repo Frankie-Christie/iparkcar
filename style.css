@@ -126,10 +126,6 @@ header {
     flex: 1;
 }
 
-.alerts {
-    overflow-y: auto;
-}
-
 /*  bottom panel */
 
 .panel-tabs {
@@ -139,6 +135,7 @@ header {
 
 .tab-content {
     background-color: #e4edfc;
+    overflow-y: auto;
 }
 
 .tab-btn {
